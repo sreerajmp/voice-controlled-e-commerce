@@ -16,6 +16,8 @@ import {
 import Logo from "./Logo";
 import { ReactComponent as LogoWhite } from "../assets/images/logos/materialprowhite.svg";
 import user1 from "../assets/images/users/user4.jpg";
+import logo1 from'../assets/images/logos/imgpsh_fullsize_anim.png'
+import Dictaphone from "../components/dashboard/Dictaphone";
 
 const Header = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -34,6 +36,8 @@ const Header = () => {
       <div className="d-flex align-items-center">
         <div className="d-lg-block d-none me-5 pe-3">
           <Logo />
+          {/* <img src={logo1}></img> */}
+          
         </div>
         <NavbarBrand href="/">
           <LogoWhite className=" d-lg-none" />
@@ -64,11 +68,10 @@ const Header = () => {
       <Collapse navbar isOpen={isOpen}>
         <Nav className="me-auto" navbar>
           <NavItem>
-            <Link to="/starter" className="nav-link">
-              Starter
-            </Link>
+          <Dictaphone/>
+
           </NavItem>
-          <NavItem>
+          {/* <NavItem>
             <Link to="/about" className="nav-link">
               About
             </Link>
@@ -83,7 +86,7 @@ const Header = () => {
               <DropdownItem divider />
               <DropdownItem>Reset</DropdownItem>
             </DropdownMenu>
-          </UncontrolledDropdown>
+          </UncontrolledDropdown> */}
         </Nav>
         <Dropdown isOpen={dropdownOpen} toggle={toggle}>
           <DropdownToggle color="transparent">

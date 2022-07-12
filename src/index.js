@@ -5,12 +5,15 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { HashRouter } from "react-router-dom";
 import Loader from "./layouts/loader/Loader";
+import GlobalContextProvider from './state/global/GlobalContextProvider'
 
 ReactDOM.render(
   <Suspense fallback={<Loader />}>
-    <HashRouter>
-      <App />
-    </HashRouter>
+    <GlobalContextProvider>
+      <HashRouter>
+        <App />
+      </HashRouter>
+    </GlobalContextProvider>
   </Suspense>,
 
   document.getElementById("root")

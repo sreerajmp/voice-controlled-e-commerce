@@ -2,7 +2,6 @@ import { Outlet } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import Header from "./Header";
 import { Container } from "reactstrap";
-import Dictaphone from "../components/dashboard/Dictaphone";
 
 const FullLayout = () => {
   return (
@@ -18,7 +17,6 @@ const FullLayout = () => {
         <div className="contentArea">
           {/********Middle Content**********/}
           <Container className="p-4" fluid>
-            <Dictaphone/>
             <Outlet />
           </Container>
         </div>
