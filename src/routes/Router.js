@@ -16,6 +16,7 @@ const SearchResultPage = lazy(() => import("../views/ui/SearchResultPage"));
 const WishList = lazy(() => import("../views/ui/WishList"));
 const Cart = lazy(() => import("../views/ui/Cart"));
 const DetailPage = lazy(() => import("../views/ui/DetailPage"));
+const Guide = lazy(() => import("../views/ui/Guide"));
 const Grid = lazy(() => import("../views/ui/Grid"));
 const Tables = lazy(() => import("../views/ui/Tables"));
 const CheckOutPage = lazy(() => import("../views/ui/CheckOutPage"));
@@ -33,6 +34,7 @@ const ThemeRoutes = [
       { path: "/starter", exact: true, element: <Starter /> },
       { path: "/about", exact: true, element: <About /> },
       { path: "/detail", exact: true, element: <DetailPage /> },
+      { path: "/Guide", exact: true, element: <Guide /> },
       { path: "/alerts", exact: true, element: <Alerts /> },
       { path: "/badges", exact: true, element: <Badges /> },
       { path: "/buttons", exact: true, element: <Buttons /> },

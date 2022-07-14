@@ -19,6 +19,11 @@ const navigation = [
     href: "/Cart",
     icon: "bi bi-cart-fill",
   },
+  {
+    title: "Guide",
+    href: "/Guide",
+    icon: "bi bi-book-fill",
+  },
   // {
   //   title: "Alert",
   //   href: "/alerts",
