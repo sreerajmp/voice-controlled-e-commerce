@@ -183,8 +183,8 @@ const Dictaphone = () => {
         e.preventDefault();
         // return false;
       }
-      if(e.code=='KeyF' && location.pathname=='/CheckOutPage'){globalCtx.globalDispatch({type:'CONFIRM'})}
-      if(e.code=='KeyJ' && location.pathname=='/CheckOutPage'){globalCtx.globalDispatch({type:'CANCEL'})}
+      if(e.code=='KeyF' && (location.pathname=='/CheckOutPage' ||location.pathname=='/Cart' )){globalCtx.globalDispatch({type:'CONFIRM'})}
+      if(e.code=='KeyJ' && (location.pathname=='/CheckOutPage' ||location.pathname=='/Cart' )){globalCtx.globalDispatch({type:'CANCEL'})}
       if (keyCmdStack.length >= 4) {
         keyCmdStack.shift()
       }

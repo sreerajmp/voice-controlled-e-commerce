@@ -40,10 +40,22 @@ let tempRead=[]
   })
   console.log("cart Item",tempRead.toString());
   window.setInterval(speechHandler(tempRead.toString()),2000)
-
-
   
  },[location.key])
+
+ 
+
+ useEffect(()=>{
+  if(globalCtx.globalState.cancelBuy && location.pathname=='/Cart'){
+    navigate('/SearchResultPage')
+    globalCtx.globalDispatch({type:'CANCEL'})}
+},[globalCtx.globalState.cancelBuy])
+useEffect(()=>{
+  if(globalCtx.globalState.confirmBuy && location.pathname=='/Cart'){
+    globalCtx.globalDispatch({ type: "CLEARCART" });setVisible(true)
+    globalCtx.globalDispatch({type:'CONFIRM'})
+  }
+},[globalCtx.globalState.confirmBuy])
   const onDismiss = () => {
     setVisible(false);
   };
